@@ -1,0 +1,18 @@
+
+
+OBJS = rtsp_demo.o rtsp_msg.o rtp_enc.o stream_queue.o utils.o
+TAR = librtsp_demo.so
+
+CC ?= gcc
+CFLAGS += -g -Wall -D__LINUX__ -fPIC
+
+all: $(TAR)
+
+$(TAR) : $(OBJS)
+	$(CC) $(CFLAGS) -shared -o $@ $^ 
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $^
+
+clean:
+	rm -f $(OBJS) $(TAR)

@@ -1,0 +1,97 @@
+OPTIONS rtsp://192.168.6.68 RTSP/1.0
+CSeq: 2
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+
+RTSP/1.0 200 OK
+CSeq: 2
+Public: OPTIONS, DESCRIBE, PLAY, PAUSE, SETUP, TEARDOWN, SET_PARAMETER, GET_PARAMETER
+Date:  Fri, Dec 25 2015 14:08:41 GMT
+
+DESCRIBE rtsp://192.168.6.68 RTSP/1.0
+CSeq: 3
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Accept: application/sdp
+
+RTSP/1.0 200 OK
+CSeq: 3
+Content-Type: application/sdp
+Content-Base: rtsp://192.168.6.68/
+Content-Length: 679
+
+v=0
+o=- 1451052521156494 1451052521156494 IN IP4 192.168.6.68
+s=Media Presentation
+e=NONE
+b=AS:5100
+t=0 0
+a=control:rtsp://192.168.6.68/
+m=video 0 RTP/AVP 96
+c=IN IP4 0.0.0.0
+b=AS:5000
+a=recvonly
+a=x-dimensions:1280,960
+a=control:rtsp://192.168.6.68/trackID=1
+a=rtpmap:96 H264/90000
+a=fmtp:96 profile-level-id=420029; packetization-mode=1; sprop-parameter-sets=Z2QAIK2EAQwgCGEAQwgCGEAQwgCEK1AoA803AQEBAg==,aO48sA==
+m=audio 0 RTP/AVP 0
+c=IN IP4 0.0.0.0
+b=AS:50
+a=recvonly
+a=control:rtsp://192.168.6.68/trackID=2
+a=rtpmap:0 PCMU/8000
+a=Media_header:MEDIAINFO=494D4B48010100000400010010710110401F000000FA000000000000000000000000000000000000;
+a=appversion:1.0
+SETUP rtsp://192.168.6.68/trackID=1 RTSP/1.0
+CSeq: 4
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Transport: RTP/AVP;unicast;client_port=56296-56297
+
+RTSP/1.0 200 OK
+CSeq: 4
+Session:        283812775;timeout=60
+Transport: RTP/AVP;unicast;client_port=56296-56297;server_port=8236-8237;ssrc=2d02fa0f;mode="play"
+Date:  Fri, Dec 25 2015 14:08:41 GMT
+
+SETUP rtsp://192.168.6.68/trackID=2 RTSP/1.0
+CSeq: 5
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Transport: RTP/AVP;unicast;client_port=56298-56299
+Session: 283812775
+
+RTSP/1.0 200 OK
+CSeq: 5
+Session:        283812775;timeout=60
+Transport: RTP/AVP;unicast;client_port=56298-56299;server_port=8234-8235;ssrc=1266baad;mode="play"
+Date:  Fri, Dec 25 2015 14:08:41 GMT
+
+PLAY rtsp://192.168.6.68/ RTSP/1.0
+CSeq: 6
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Session: 283812775
+Range: npt=0.000-
+
+RTSP/1.0 200 OK
+CSeq: 6
+Session:        283812775
+RTP-Info: url=rtsp://192.168.6.68/trackID=1;seq=16387;rtptime=1724325370,url=rtsp://192.168.6.68/trackID=2;seq=30619;rtptime=153273528
+Date:  Fri, Dec 25 2015 14:08:41 GMT
+
+GET_PARAMETER rtsp://192.168.6.68/ RTSP/1.0
+CSeq: 7
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Session: 283812775
+
+RTSP/1.0 200 OK
+CSeq: 7
+Date:  Fri, Dec 25 2015 14:08:41 GMT
+
+TEARDOWN rtsp://192.168.6.68/ RTSP/1.0
+CSeq: 8
+User-Agent: LibVLC/2.1.5 (LIVE555 Streaming Media v2014.05.27)
+Session: 283812775
+
+RTSP/1.0 200 OK
+CSeq: 8
+Session:        283812775
+Date:  Fri, Dec 25 2015 14:08:49 GMT
+
